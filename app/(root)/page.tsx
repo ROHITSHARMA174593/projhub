@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { Boxes } from "@/components/ui/background-boxes";
-import { cn } from "@/lib/utils";
 import SearchForm from "@/components/SearchForm";
 
 export function BackgroundBoxesDemo() {
   return (
-    <div className="h-[730px] relative w-full overflow-hidden bg-slate-900 flex flex-col justify-center items-center">
+    <>
+      <div className="h-[730px] relative w-full overflow-hidden bg-slate-900 flex flex-col justify-center items-center">
       <div className="absolute inset-0 w-full h-full  z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
       <Boxes />
@@ -18,5 +18,21 @@ export function BackgroundBoxesDemo() {
       </p>
       <SearchForm />
     </div>
+
+    <section className="section_container">
+      <p className="text-30-semibold">
+        Trendy Project
+      </p>
+      <ul className="mt-7 card_grid grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-1 justify-center">
+        {
+          ['1','2','3','4','5'].map((curElem, i) => {
+            return <div key={i}>
+              {curElem}
+            </div>
+          })
+        }
+      </ul>
+    </section>
+    </>
   );
 }
