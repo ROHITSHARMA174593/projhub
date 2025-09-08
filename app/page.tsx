@@ -1,5 +1,5 @@
 // app/page.tsx
-import {Layout} from './(root)/layout';
+import Layout  from './(root)/layout';
 import {BackgroundBoxesDemo} from './(root)/page';
 
 export default function Page() {

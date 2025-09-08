@@ -2,6 +2,7 @@
 import React from "react";
 import { Boxes } from "@/components/ui/background-boxes";
 import SearchForm from "@/components/SearchForm";
+import { ThreeDCardDemo } from "@/components/ThreeDCard";
 
 export function BackgroundBoxesDemo() {
   return (
@@ -23,11 +24,11 @@ export function BackgroundBoxesDemo() {
       <p className="text-30-semibold">
         Trendy Project
       </p>
-      <ul className="mt-7 card_grid grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-1 justify-center">
+      <ul className="mt-7 card_grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 justify-center">
         {
           ['1','2','3','4','5'].map((curElem, i) => {
             return <div key={i}>
-              {curElem}
+              <ThreeDCardDemo />
             </div>
           })
         }
